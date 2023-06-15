@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+  }
+  
+  .song-list {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .song-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: inline-block;
+    width: 80px;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:not(:last-child) {
+    margin-right: 10px;
+  }
+  

@@ -1,0 +1,64 @@
+/* Global CSS styles for the application */
+
+/* Custom styles for the app-dashboard component */
+.app-dashboard .card-header {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .app-dashboard .list-group-item {
+    padding: 10px;
+  }
+  
+  .app-dashboard .list-group-item img {
+    border-radius: 50%;
+  }
+  
+  .app-dashboard .progress {
+    height: 5px;
+  }
+  
+  .app-dashboard .btn-primary {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+
+
+/* body {
+    padding-top: 60px;
+  }
+  
+  .card-header {
+    font-weight: bold;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .list-group-item.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .list-group-item .play-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .list-group-item .profile-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+   */

@@ -1,0 +1,101 @@
+body.gradient-bg {
+  /* background: linear-gradient(to bottom right, #ff9f00, #ffcd02);
+   */
+   background-image: linear-gradient(to top right, #fffbd5, #b20a2c);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* .gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #ff9f00, #ffcd02);
+  z-index: -1;
+} */
+
+.register-container {
+  position: relative;
+  margin: 40px auto;
+  max-width: 400px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust the alpha value for transparency */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+
+}
+
+/* Rest of the styles remain the same */
+
+
+
+/* .register-container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 35px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+  margin-top: 40px;
+} */
+
+.register-container h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.register-container form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #e91e63;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-register-link {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.login-register-link a {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+/* Optional: Add additional styles to further customize the appearance */

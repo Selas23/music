@@ -1,0 +1,46 @@
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+
+
+
+/* .card-header {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .list-group-item {
+    padding: 10px;
+  }
+  
+  .list-group-item img {
+    border-radius: 50%;
+  }
+  
+  .progress {
+    height: 5px;
+  }
+  
+  .btn-primary {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+   */

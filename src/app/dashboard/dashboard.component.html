@@ -1,0 +1,155 @@
+<div class="container mt-4">
+  <h3>Welcome to your dashboard</h3>
+
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          Songs with Ratings
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Song</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Genre</th>
+                <th>Language</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let song of ratedSongs">
+                <td>{{ song.name }}</td>
+                <td>{{ song.artist }}</td>
+                <td>{{ song.album }}</td>
+                <td>{{ song.genre }}</td>
+                <td>{{ song.language }}</td>
+                <td>{{ song.rating }}</td>
+              </tr>
+              <tr *ngIf="ratedSongs.length === 0">
+                <td colspan="4">No songs available</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          Song Details and Controls
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Song</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Play</th>
+                <th>Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let song of recentlyPlayedSongs">
+                <td>{{ song.name }}</td>
+                <td>{{ song.artist }}</td>
+                <td>{{ song.album }}</td>
+                <td>
+                  <button class="btn btn-primary" (click)="togglePlayPause(song)" [disabled]="song.isPlaying">
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <button class="btn btn-primary" (click)="togglePlayPause(song)" [disabled]="!song.isPlaying">
+                    <i class="fas fa-pause"></i>
+                  </button>
+                </td>
+                <td>
+                  <div class="rating-stars">
+                    <span class="star" [class.checked]="song.rating >= 1" (click)="rateSong(song, 1)">
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="star" [class.checked]="song.rating >= 2" (click)="rateSong(song, 2)">
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="star" [class.checked]="song.rating >= 3" (click)="rateSong(song, 3)">
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="star" [class.checked]="song.rating >= 4" (click)="rateSong(song, 4)">
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="star" [class.checked]="song.rating >= 5" (click)="rateSong(song, 5)">
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr *ngIf="recentlyPlayedSongs.length === 0">
+                <td colspan="5">No songs played yet</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+<!-- <div class="container mt-4">
+  <h3>Welcome to your dashboard</h3>
+
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          Recently Played Songs
+        </div>
+        <div class="list-group list-group-flush" id="recently-played-list">
+          <div class="list-group-item" *ngFor="let song of recentlyPlayedSongs">
+            <div class="d-flex align-items-center">
+              <img src="assets/OIP.jpg" alt="{{ song.name }}" class="mr-3" width="50" height="50">
+              
+              <div>
+                <h5 class="mb-1">{{ song.name }}</h5>
+                <p class="mb-0">{{ song.artist }}</p>
+                <small class="text-muted">{{ song.album }}</small>
+              </div>
+              <div class="ml-auto">
+                <button class="btn btn-primary mr-2" (click)="togglePlayPause(song)" *ngIf="!song.isPlaying">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button class="btn btn-primary" (click)="togglePlayPause(song)" *ngIf="song.isPlaying">
+                  <i class="fas fa-pause"></i>
+                </button>
+              </div>
+            </div>
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" [style.width]="song.progress + '%'" [attr.aria-valuenow]="song.progress" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="list-group-item" *ngIf="recentlyPlayedSongs.length === 0">No songs played yet</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          Song Details
+        </div>
+        <div class="card-body" *ngIf="currentSong">
+          <h5 class="card-title">{{ currentSong.title }}</h5>
+          <p class="card-text">{{ currentSong.description }}</p>
+          <a href="#" class="btn btn-primary">Play Song</a>
+        </div>
+        <div class="card-body" *ngIf="!currentSong">
+          <p class="card-text">No song currently playing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,59 @@
+<h1>Song Management</h1>
+
+<div class="song-list">
+  <h2>Song List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Genre</th>
+        <th>Language</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let song of songs">
+        <td>{{ song.title }}</td>
+        <td>{{ song.artist }}</td>
+        <td>{{ song.album }}</td>
+        <td>{{ song.genre }}</td>
+        <td>{{ song.language }}</td>
+        <td>
+          <button (click)="selectSong(song)">Edit</button>
+          <button (click)="deleteSong(song)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="song-form">
+  <h2>{{ selectedSong.title ? 'Edit Song' : 'Create Song' }}</h2>
+  <form *ngIf="selectedSong" (ngSubmit)="selectedSong.title ? updateSong() : createSong()">
+    <div>
+      <label>Title:</label>
+      <input type="text" [(ngModel)]="selectedSong.title" name="title" required>
+    </div>
+    <div>
+      <label>Artist:</label>
+      <input type="text" [(ngModel)]="selectedSong.artist" name="artist" required>
+    </div>
+    <div>
+      <label>Album:</label>
+      <input type="text" [(ngModel)]="selectedSong.album" name="album" required>
+    </div>
+    <div>
+      <label>Genre:</label>
+      <input type="text" [(ngModel)]="selectedSong.genre" name="genre" required>
+    </div>
+    <div>
+      <label>Language:</label>
+      <input type="text" [(ngModel)]="selectedSong.language" name="language" required>
+    </div>
+    <div>
+      <button type="submit">{{ selectedSong.title ? 'Update' : 'Create' }}</button>
+    </div>
+  </form>
+</div>

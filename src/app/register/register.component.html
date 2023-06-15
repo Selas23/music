@@ -1,0 +1,28 @@
+<body class="gradient-bg">
+  <!-- <div class="gradient-bg"></div>
+  <div class="content-wrapper"> -->
+<div class="register-container">
+  <h2>Register</h2>
+  <form style="text-align: center;" [formGroup]="registrationForm" (ngSubmit)="register()">
+    <div class="form-group">
+      <label for="userName">Username</label>
+      <input type="email" formControlName="userName" class="form-control" id="userName" placeholder="Enter e-mail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    </div>
+    <div class="form-group">
+      <label for="userFirstName">First Name</label>
+      <input type="text" formControlName="userFirstName" class="form-control" id="userFirstName" placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+      <label for="userLastName">Last Name</label>
+      <input type="text" formControlName="userLastName" class="form-control" id="userLastName" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+      <label for="userPassword">Password</label>
+      <input type="password" formControlName="userPassword" class="form-control" id="userPassword" placeholder="min 7 characters">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">Register</button>
+  </form>
+  <p class="login-register-link">Have an account? <a routerLink="/login">Login here</a></p>
+</div>
+  <!-- </div> -->
+</body>
